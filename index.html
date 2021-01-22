@@ -9,17 +9,18 @@
 </head>
 
 <body>
-    <h1>Snake</h1>
     <div class="info">
-        <h2>Name Player</h2>
-        <aside>Score: </aside>
-        <aside>Max Time: </aside>
+        <h1 class="logo">Snake</h1>
+        <label class="info__label">Score: </label>
+        <label class="info__label">Max Time: </label>
     </div>
-    <canvas id='snake' width="400" height="400" class="canvas"></canvas>
-    <div class="buttons">
-        <button id='startGame'>Start</button>
-        <button id='pause'>Pause</button>
-    </div>
+    <section class="game-content">
+        <canvas id='snake' width="400" height="400" class="canvas"></canvas>
+        <div class="buttons">
+            <button id='start-game'>Start</button>
+            <button id='pause'>Pause</button>
+        </div>
+    </section>
     <script src="js/index.js"></script>
 </body>
 
