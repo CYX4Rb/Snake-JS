@@ -1,4 +1,55 @@
+
+* {
+    font-size: 30px
+}
+
+body {
+    border: 1px solid black;
+}
+
 .canvas {
     display: block;
     margin: 0 auto;
+}
+.info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo {
+    border: 1px solid black;
+    padding: 10px;
+    background-color: pink;
+}
+
+.info__label {
+    font-weight: bold;
+}
+
+.game-content {
+    display: flex;
+    justify-content: center; 
+}
+
+.canvas {
+    margin: 0 0 20px 130px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons button {
+    margin: 10px;
+    width: 120px;
+    height: 40px;
+}
+
+.buttons button:first-child{
+    margin-top: 0px;
+}
+
+.buttons button:last-child{
+    margin-bottom: 0px;
 }

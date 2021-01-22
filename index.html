@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = 'stylesheet' href="scss/style.css">
+    <link rel='stylesheet' href="scss/style.css">
+    <link rel='stylesheet' href="scss/normolize.css">
     <title>SNAKE</title>
 </head>
+
 <body>
-    
-    <canvas id = 'snake' width="400" height="400" class="canvas"></canvas>
+    <div class="info">
+        <h1 class="logo">Snake</h1>
+        <label class="info__label">Score: </label>
+        <label class="info__label">Max Time: </label>
+    </div>
+    <section class="game-content">
+        <canvas id='snake' width="400" height="400" class="canvas"></canvas>
+        <div class="buttons">
+            <button id='start-game'>Start</button>
+            <button id='pause'>Pause</button>
+        </div>
+    </section>
     <script src="js/index.js"></script>
 </body>
+
 </html>
