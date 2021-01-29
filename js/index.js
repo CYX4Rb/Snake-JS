@@ -94,6 +94,11 @@ function startGame(speed) {
         }
         return false
     }
+
+    // check game over
+    function isGameOver(snake) {
+        return snake[0].x < 0 || snake[0].x > 450 || snake[0].y < 0 || snake[0].y > 450 || crash(snake)
+    }
     // initialization
     timeId = setInterval(function () {
         if (!isPaused) {
@@ -142,9 +147,9 @@ function startGame(speed) {
             } else {
                 snake.pop()
             }
-
-            // game over
-            if (snake[0].x < 0 || snake[0].x > 450 || snake[0].y < 0 || snake[0].y > 450 || crash(snake)) {
+            
+            // game over ?
+            if (isGameOver(snake)) {
                 points = 0
                 ctx.clearRect(0, 0, canvas.width, canvas.height)
                 ctx.font = '80px serif'
@@ -158,11 +163,17 @@ function startGame(speed) {
 }
 
 
-start.addEventListener('click', () => {
-    if(!isPaused){
-    clearInterval(timeId)
-    startGame(speed.value)}
-})
+start.addEventListener(
+    'click',
+    () => {
+        if (!isPaused) {
+            clearInterval(timeId)
+            startGame(speed.value)
+        }
+    })
 
-pause.addEventListener('click', () => isPaused ?  isPaused = false : isPaused =  true)
+pause.addEventListener(
+    'click',
+    () => isPaused = !isPaused
+)
 
